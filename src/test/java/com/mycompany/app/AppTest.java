@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class AppTest {
 	
-   //String message = "Hello World";	
+   String message = "Hello World";	
    App messageUtil = new App();
 
    @Test
