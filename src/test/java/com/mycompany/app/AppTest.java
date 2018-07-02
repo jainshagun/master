@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 public class AppTest {
 	
-   String message = "Hello World";	
-   App messageUtil = new App(message);
+   //String message = "Hello World";	
+   App messageUtil = new App();
 
    @Test
    public void testPrintMessage() {
