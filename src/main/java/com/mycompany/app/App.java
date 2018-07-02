@@ -7,13 +7,13 @@ public class App {
    //Constructor
    //@param message to be printed
 	
-   public App(String message){
-      this.message = message;
-   }
+   //public App(String message){
+      //this.message = message;
+   //}
       
    // prints the message
    public String printMessage(){
-      System.out.println(message);
-      return message;
+      //System.out.println(message);
+      return "Hello World!!";
    }   
 }  
