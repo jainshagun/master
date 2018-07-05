@@ -2,30 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-		bat 'mvn package'
-            }
-	    post{
-		always{
-                     withSonarQubeEnv('sonarQube') {
-                     // requires SonarQube Scanner for Maven 3.2+
-                     bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-                     }
-                }
-	    }
-        }
-    stage('Deploy') {
+        
+    	stage('Deploy') {
             steps {
                 echo 'Deploying....'
+		bat 'docker run -d -p 9991:8080 hello'
             }
-    }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-		bat 'java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App '
-	    }
-        }
+    	}
+    	
     }
 }
